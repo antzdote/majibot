@@ -1,0 +1,305 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- reports
+- waters
+- query_knowledge_base
+- billing
+- inquiry
+- FAQs
+- new_customer
+- water_tank
+- stop
+- thankyou
+- water
+- chitchat
+- FAQS_read_meter
+- FAQS_faulty_meter
+- FAQS_corruption
+- FAQS_new_connection
+- FAQS_time_to_conn
+- FAQS_servicing
+- FAQS_tanker
+- FAQS_expensive_reports
+- FAQS_dirty_water
+- FAQS_complaint
+- FAQS_reconnection
+- FAQS_billing
+- FAQS_disconnections
+- rationing
+- enter_locale
+- out_of_scope
+- ask_whats_possible
+- human_handoff
+- day
+- inform
+- Love
+- Rationing_Riverside
+- complaints
+- phone
+entities:
+- object_type
+- rationing
+- mention
+- attribute
+- Zone
+- feedback
+- feedback_reason
+- requested_slot
+- day
+- Location
+- leak_type
+- burst
+- blockage
+- theft
+- phone
+slots:
+  Location:
+    type: unfeaturized
+  Zone:
+    type: unfeaturized
+  attribute:
+    type: unfeaturized
+  blockage:
+    type: unfeaturized
+  burst:
+    type: unfeaturized
+  day:
+    type: unfeaturized
+  feedback:
+    type: bool
+  feedback_reason:
+    type: text
+  leak:
+    type: unfeaturized
+  mention:
+    type: unfeaturized
+  object_type:
+    type: unfeaturized
+  phone:
+    type: unfeaturized
+  rationing:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  theft:
+    type: unfeaturized
+templates:
+  utter_Loc:
+  - text: provide a locale
+  utter_love:
+  - text: Sorry but i have feelings for someone else! please understand
+  - text: Why do you love me?
+  - text: I dont understand I am machine
+  utter_FAQS_faulty_meter:
+  - text: 'You should report to the Company and it will be replaced free of charge.
+      However, customers will be required to pay for replacement of meters that have
+      been willfully damaged. '
+  utter_FAQS_corruption:
+  - text: 'Corruption is a two-way activity: there must be a willing giver and a willing
+      receiver. To fight corruption, customers are asked to report employees demanding
+      bribes to the Company Managing Director on Tel +254203988520'
+  utter_FAQS_new_connection:
+  - text: The customer fills in an application form together with copies of an ID
+      / Passport and Pin certificate. For domestic consumers Ksh 2,500 is paid both
+      for survey and meter deposit while for commercial customers its ksh 25,000,
+      for industrial customers its 50,000, for domestic construction its 15,000,  for
+      commercial construction 50,000
+  utter_FAQS_time_to_conn:
+  - text: It takes 14 days for a new consumer to be connected.
+  utter_FAQS_servicing:
+  - text: No, the meter is read on monthly basis free of charge.
+  utter_FAQS_tanker:
+  - text: 'Make a formal request which will be acknowledged through payment for the
+      service and clear any outstanding bill you might have and the water will be
+      supplied within 5 days. '
+  utter_FAQS_expensive_reports:
+  - text: "NCWSC appreciates the role customers play in communicating information\
+      \ on leaks and burst and they have opened a call center to receive all customer\
+      \ complaints.\nThere are toll free lines which are absolutely free and the numbers\
+      \ are:\n0703080598\n0702206418\n0702206328\n0702206459\n0702205964\n "
+  utter_FAQS_dirty_water:
+  - text: Call the Call Centre on the following numbers or report to any NCWSC business
+      Centre near you and our technical team will address the issues within 24 hours.0702206418,0702206328
+      or visit our social media pages
+  utter_FAQS_complaint:
+  - text: 'Visit any of the NCWSC business centers and lodge in your complaint with
+      the customer care staff who will give you a complaint number for ease of follow
+      up, or lodge your complaint via maji voice by dialing *888# '
+  utter_FAQS_reconnection:
+  - text: 'NCWSC is committed to ensuring that you are reconnected within 24 hours
+      after paying the required amount owed. '
+  utter_FAQS_billing:
+  - text: Please provide me with your account number
+  utter_FAQS_disconnections:
+  - text: 'The link between cost and price is the meter reading. After a meter reading,
+      Billing is based on set regulator set rates. The consumer is billed for only
+      what is consumed. '
+  utter_FAQS_rationing:
+  - text: Water shortages arise from leakages, illegal connections, and vandalism
+      of the piping system, poor infrastructure and natural conditions like drought.
+      The Company is tackling some of these problems by purchasing and installing
+      water meters and other equipment to enhance service provision. The company promises
+      to continuously repair all leaks within 48hours of reporting.
+  utter_greet:
+  - text: Hello, Welcome to majibot!
+  - text: Welcome, how can I be of assistance?
+  - text: wassup
+  - text: Greetings, what can i do for you?
+  - text: Majibot at your service!
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Goodbye hope i was helpful
+  - text: Bon voyage amigo
+  utter_iamabot:
+  - text: My name is majibot glad to be of assistance.
+  utter_post_report:
+  - text: Is this the location you wish to report?
+  utter_water:
+  - text: Please provide your account number.
+  utter_bills:
+  - text: Please provide your account number.
+  utter_enquire:
+  - text: The average water consumption is calculated per cubic meters
+  utter_faqs:
+  - text: I will get back to you
+  utter_info:
+  - text: 'You need  to have the lands plot number, one off installation fee and fill
+      in the forms below. You can find the website link to the application page <here/link> '
+  utter_tanks:
+  - text: Provide a location
+  utter_ask_default_rephrase:
+  - text: Sorry, I am not sure I understand. Could you rephrase that?
+  - text: Could you please rephrase your message? I din't quite get that?
+  utter_cannot_help:
+  - text: I'm afraid I cannot help with that!
+  utter_handoff:
+  - text: let me put you in touch with someone.
+  utter_explain_whatspossible:
+  - text: I can help you get your meter bill, report leaks and blockages etc, answer
+      any questions you have on our services and procedures for any of our services.
+  utter_slots_values:
+  - text: "I am doing to a billing search using the following parameters:\n"
+  utter_welcome:
+  - text: You are welcome
+  utter_ask_continue:
+  - text: Do you wish to continue?
+  utter_wrong_acc:
+  - text: 'I am sorry we could not find the account details of the: '
+  utter_chitchat:
+  - text: I have been created by the ICT staff at Nairobi Water. I wish to be of assistance,
+      feel free to ask me any question
+  utter_FAQS_read_meter:
+  - text: 'Yes. The Company encourages consumers to take their own readings so that
+      they can also track their water consumption and budget for it. However it is
+      illegal to deny authorized Company staff access to water meters. '
+  utter_values:
+  - text: I am going to run a ration schedule for the following {location}. Please
+      wait...
+  utter_wrong_location:
+  - text: Location is not in database or invalid naming
+  utter_submit:
+  - text: All done!!!
+  utter_ask:
+  - text: Is t a sewer leak or water leak
+  utter_complaint:
+  - text: what is your complaint?
+    buttons:
+    - title: No water\n
+      payload: No water
+    - title: Water Quality\n
+      payload: Water Quality
+    - title: Billing
+      payload: Billing
+    - title: Vandalism or Theft
+      payload: Vandalism/ Theft
+    - title: Meter Problems
+      payload: Meter Problems
+    - title: Corruption
+      payload: Corruption
+    - title: Customer Care
+      payload: Customer Care
+    - title: Major Burst
+      payload: Major Burst
+    - title: New Connection
+      payload: New Connection
+    - title: Account Termination
+      payload: Account Termination
+    - title: Stolen Water
+      payload: Stolen Water
+    - title: Faulty Meter
+      payload: Faulty Meter
+    - title: Parallel Accounts
+      payload: Parallel Accounts
+    - title: Deposit Refunds
+      payload: Deposit Refunds
+    - title: Non-reflected Payments
+      payload: Non-reflected Payments
+    - title: Reconnection/ Disconnection
+      payload: Reconnection/ Disconnection
+    - title: Incorrect Account details
+      payload: Incorrect Account details
+  utter_comp:
+  - text: What is the nature of your complaint?
+  utter_phone:
+  - text: Please provide me with your phone number!
+actions:
+- utter_comp
+- utter_phone
+- utter_complaint
+- utter_love
+- utter_search
+- utter_finish
+- utter_values
+- utter_submit
+- utter_explain_whatspossible
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_did_that_help
+- utter_post_report
+- utter_water
+- utter_bills
+- utter_enquire
+- utter_faqs
+- utter_info
+- utter_cannot_help
+- utter_ask_default_rephrase
+- utter_tanks
+- utter_welcome
+- utter_chitchat
+- utter_FAQS_read_meter
+- utter_FAQS_faulty_meter
+- utter_FAQS_corruption
+- utter_FAQS_new_connection
+- utter_FAQS_time_to_conn
+- utter_FAQS_servicing
+- utter_FAQS_tanker
+- utter_FAQS_expensive_reports
+- utter_FAQS_dirty_water
+- utter_FAQS_complaint
+- utter_FAQS_reconnection
+- utter_FAQS_billing
+- utter_FAQS_disconnections
+- utter_FAQS_rationing
+- action_faqs
+- action_fallback
+- utter_Loc
+- action_human_handoff
+- action_slot_reset
+- action_billing
+- action_search_bills
+- action_reports
+- utter_new_connection
+- action_query_knowledge_base
+- utter_wrong_acc
+- utter_slots_values
+- utter_ask_continue
+- utter_wrong_location
+- utter_handoff
+forms:
+- feedback_form
